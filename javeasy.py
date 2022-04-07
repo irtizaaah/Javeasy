@@ -5,7 +5,7 @@
 print("JAVEASY >>")
 className = input('\n Class ')
 className = className[0].capitalize() + className[1:];
-inputCode = '' # input code
+inputCode = ''
 properties = []
 quit = False
 
