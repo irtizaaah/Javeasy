@@ -5,16 +5,16 @@
 print("JAVEASY >>")
 className = input('\n Class ')
 className = className[0].capitalize() + className[1:];
-myCode = ''
+inputCode = '' # input code
 properties = []
 quit = False
 
 # INPUT MEMBER VARIABLES
 while(quit is False):
-  myCode = input('\n\tprivate ')
-  if myCode != ';':
+  inputCode = input('\n\tprivate ')
+  if inputCode != ';':
     access = 'private'
-    dataType, name = myCode.split()
+    dataType, name = inputCode.split()
     properties.append([access, dataType, name])
   else:
     quit = True;
@@ -52,7 +52,7 @@ for prop in properties: # set constructor values
 constructorCode += '\t}' # end constructor
 
 # COMPILE ALL TEMPLATE CODE
-code = f'''
+outputCode = f'''
 public class {className}{{
 \n\t//MEMBER VARIABLES\n
 {propertiesCode}
@@ -65,4 +65,4 @@ public class {className}{{
 }}
 ''' 
 print("\n\nTRANSPILED JAVA CODE >>\n")
-print(code)
+print(outputCode)
