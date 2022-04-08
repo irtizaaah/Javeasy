@@ -31,7 +31,7 @@ for prop in properties:
   
   constructorParameters += prop[1] + ' ' + prop[2] + ', '
   
-  tempName = prop[2][0].capitalize() + prop[2][1:].lower(); 
+  tempName = prop[2][0].capitalize() + prop[2][1:]; 
   
   gettersCode += f'''
   \tpublic {prop[1]} get{tempName}(){{
